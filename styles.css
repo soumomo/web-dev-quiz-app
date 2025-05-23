@@ -1,0 +1,177 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+
+.quiz-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:#f3f4f6;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.app-name {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo {
+    vertical-align: middle;
+}
+#quiz-intro-screen h1{
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    letter-spacing: -0.025em;
+}
+
+#quiz-intro-screen h3{
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #6b7280;
+    letter-spacing: 0.025em;
+}
+#start-button {
+    background-color: #2b82f6;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: block;
+    margin: 0 auto; /* common technique for centering block elements*/
+
+}
+
+/* CRITICAL - Add this first or your screen switching won't work! */
+.hidden {
+    display: none;
+}
+
+/* Main quiz container */
+.quiz-container {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 80px;
+}
+
+/* Question text */
+#question-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #1f2937;
+}
+
+/* Progress indicator */
+.progress {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Options container */
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Option buttons */
+#options-container button {
+    background-color: #f9fafb;
+    border: 2px solid #e5e7eb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: left;
+}
+
+#options-container button:hover {
+    background-color: #eff6ff;
+    border-color: #2b82f6;
+    transform: translateY(-1px);
+}
+
+/* Result screen */
+#result-screen {
+    text-align: center;
+}
+
+#result-screen h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+#score-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #2b82f6;
+}
+
+/* Restart button */
+#restart-button {
+    background-color: #059669;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#restart-button:hover {
+    background-color: #047857;
+}
+
+/* Add hover to your existing start button */
+#start-button:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Hide question and result screens by default */
+#question-screen,
+#result-screen {
+    display: none;
+}
